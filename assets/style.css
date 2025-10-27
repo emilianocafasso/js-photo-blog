@@ -16,3 +16,26 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Edu TAS Beginner', cursive;
     font-weight: 600;
 }
+.jumbotron {
+    height: 100vh;
+    background-image: url('./img/cork.png');
+}
+
+.polaroid-card {
+    position: relative;
+    background: white;
+    padding: 0 15px;
+
+    .pin {
+        width: 30px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -10px;
+    }
+    .date {
+        font-family: 'Sometype Mono', monospace;
+        color: gray;
+    }
+
+}
