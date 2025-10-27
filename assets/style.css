@@ -18,10 +18,10 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
 }
 .jumbotron {
-    height: 100vh;
     background-image: url('./img/cork.png');
     display: flex;
     justify-content: center;
+    padding-bottom: 3.5rem;
     .jumbo-container {
         width: 60%;
     }
@@ -48,6 +48,9 @@ h1, h2, h3, h4, h5, h6 {
     }
     .card-img-top {
         width: 100%;
+    }
+    .card-title {
+        font-weight: 900;
     }
 
 }
