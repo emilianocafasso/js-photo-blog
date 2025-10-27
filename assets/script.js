@@ -18,7 +18,15 @@ function displayCards(cards) {
             const col = document.createElement('div')
             col.className = 'col-4'
             
-            
+            col.innerHTML = `
+            <div class="polaroid-card">
+            <img src="./assets/img/pin.svg" alt="" class="pin">
+            <img src="${card.url}" alt="" class="card-img-top mt-3">
+            <p class="date mt-2">${card.date}</p>
+            <h5 class="card-title pb-2">${card.title}</h5>
+            </div>
+            `;
+        container.appendChild(col)
         })
     }
 }
