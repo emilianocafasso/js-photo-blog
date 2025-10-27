@@ -16,18 +16,19 @@ function displayCards(cards) {
             
             // creo un nuovo col per ogni card e lo aggiungo al container
             const col = document.createElement('div')
-            col.className = 'col-4'
+            col.className = 'col-md-6 col-lg-4'
             
             col.innerHTML = `
             <div class="polaroid-card">
             <img src="./assets/img/pin.svg" alt="" class="pin">
             <img src="${card.url}" alt="" class="card-img-top mt-3">
             <p class="date mt-2">${card.date}</p>
-            <h5 class="card-title pb-2">${card.title}</h5>
+            <h5 class="card-title text-uppercase pb-2">${card.title}</h5>
             </div>
             `;
         container.appendChild(col)
         })
     }
+
 }
 displayCards();
