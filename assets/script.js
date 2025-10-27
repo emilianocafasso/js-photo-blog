@@ -6,14 +6,20 @@ function displayCards(cards) {
 
 
     for(let i=0; i<6; i++) {
+        
         fetch('https://lanciweb.github.io/demo/api/pictures/')
         .then(response => response.json())
         .then(data => {
             const card = data[i]
+            
+            // console.log("card = " + card, card.title, card.date);
+            
+            // creo un nuovo col per ogni card e lo aggiungo al container
+            const col = document.createElement('div')
+            col.className = 'col-4'
+            
+            
         })
-        // creo un nuovo col per ogni card e lo aggiungo al container
-        const col = document.createElement('div')
-        col.className = 'col-4'
-
     }
 }
+displayCards();
