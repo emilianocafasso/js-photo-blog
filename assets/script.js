@@ -4,8 +4,7 @@ const overlayImg = document.getElementById('overlayImg')
 const CloseBtn = document.getElementById('CloseBtn')
 
 // funzioni per l'overlay
-function showOverlay(url) {
-    overlayImg.src = url
+function showOverlay() {
     overlay.classList.remove('hidden')
 }
 
@@ -14,6 +13,8 @@ function hideOverlay() {
 }
 
 CloseBtn.addEventListener('click', hideOverlay)
+
+
 
 // creo funzione per generare le 6 card 
 function displayCards(cards) {
@@ -25,8 +26,6 @@ function displayCards(cards) {
         .then(response => response.json())
         .then(data => {
             const card = data[i]
-            
-            // console.log("card = " + card, card.title, card.date);
             
             // creo un nuovo col per ogni card e lo aggiungo al container
             const col = document.createElement('div')
@@ -40,7 +39,10 @@ function displayCards(cards) {
             <h5 class="card-title text-uppercase pb-2">${card.title}</h5>
             </div>
             `;
-        container.appendChild(col)
+
+            container.appendChild(col)
+            
+            col.addEventListener('click', showOverlay)
         })
     }
 }
