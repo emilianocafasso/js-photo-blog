@@ -1,4 +1,19 @@
 const container = document.getElementById('cards-container')
+const overlay = document.getElementById('overlay')
+const overlayImg = document.getElementById('overlayImg')
+const CloseBtn = document.getElementById('CloseBtn')
+
+// funzioni per l'overlay
+function showOverlay(url) {
+    overlayImg.src = url
+    overlay.classList.remove('hidden')
+}
+
+function hideOverlay() {
+    overlay.classList.add('hidden')
+}
+
+CloseBtn.addEventListener('click', hideOverlay)
 
 // creo funzione per generare le 6 card 
 function displayCards(cards) {
