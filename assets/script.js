@@ -4,7 +4,6 @@ const container = document.getElementById('cards-container')
 function displayCards(cards) {
     container.innerHTML = '' // svuoto il container
 
-
     for(let i=0; i<6; i++) {
         
         fetch('https://lanciweb.github.io/demo/api/pictures/')
@@ -29,6 +28,5 @@ function displayCards(cards) {
         container.appendChild(col)
         })
     }
-
 }
 displayCards();
